@@ -10,7 +10,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
     const ul = document.querySelector('ul');
 
-    const addList = (text, ul) => {
+    const addList = (text) => {
       const li = document.createElement('li');
       li.textContent = text;
       ul.appendChild(li);
@@ -18,11 +18,11 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
     for (let int = 1; int <= 99; int++) {
       if ((int % FizzNum === 0) && (int % BuzzNum === 0)) {
-        addList('FizzBuzz ' + int, ul);
+        addList('FizzBuzz ' + int);
       } else if (int % FizzNum === 0) {
-        addList('Fizz ' + int, ul);
+        addList('Fizz ' + int);
       } else if (int % BuzzNum === 0) {
-        addList('Buzz ' + int, ul);
+        addList('Buzz ' + int);
       }
     }
   } else {
